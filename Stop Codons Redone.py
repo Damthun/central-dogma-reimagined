@@ -12,7 +12,7 @@ class DNA:
         frames = {
             0: [], 1: [], 2: []
         }
-
+        # For a sequence of length L, the number of possible codons is equal to L-2: ACTACT -> ACT,CTA,TAC,ACT 
         for nucleotide in range(len(self.mrna_sequence)-2):
             current_codon = self.mrna_sequence[nucleotide:nucleotide+3]  # For "ACTACT" grab ACT, CTA, TAC, ACT
             # Since we are looking at i:i+3 each iteration, i % 3 gives 0, 1 or 2 which relates to which ORF we are in.
